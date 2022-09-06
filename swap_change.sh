@@ -1,4 +1,8 @@
-SWAP=$(( 1024 * $1))
+if [ $1 -gt 4 ]; then
+  SWAP=$((1024*4)) 
+else
+  SWAP=$(( 1024 * $1))
+fi
 
 sudo dphys-swapfile swapoff && \
 printf "# /etc/dphys-swapfile - user settings for dphys-swapfile package\n
