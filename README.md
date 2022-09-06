@@ -3,7 +3,7 @@ Trying to make a few utilities for raspberry pi
 
 ## Useful information 
 
-I limited in the scripts 'swap_change.sh' and 'limit_swap_change.sh' an maximum of 8GB for safety reasons.
+I limited in the scripts 'swap_change.sh' and 'limit_swap_change.sh' a maximum of 8GB for safety reasons.
 
 ## Using swap_change.sh - Change your swap size
 
