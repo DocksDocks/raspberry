@@ -1,9 +1,9 @@
 if [ $1 -eq 0 ]; 
 then
-  SWAP = $((0))
+  SWAP = 0
 elif [ $1 -lt 0 ]; 
 then
-  SWAP=$((100))
+  SWAP = 100
 elif [ $1 -gt 8 ];
 then
   SWAP=$((1024*8)) 
@@ -12,7 +12,7 @@ else
 fi
 
 
-if [ $SWAP -gt 0 ];
+if [ SWAP -gt 0 ];
 then
     sudo dphys-swapfile swapoff && \
     printf "# /etc/dphys-swapfile - user settings for dphys-swapfile package\n
