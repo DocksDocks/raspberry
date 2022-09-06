@@ -1,6 +1,6 @@
-if [ $1 -gt 2 ]; 
+if [ $1 -gt 8 ]; 
 then
-  SWAP=$((1024*2)) 
+  SWAP=$((1024*8)) 
 elif [ $1 -lt 0 ]; 
 then
   SWAP=100
