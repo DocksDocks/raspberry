@@ -1,4 +1,5 @@
 #!/bin/bash
+SWAP = 0
 if [ $1 -eq 0 ]; 
 then
   SWAP = 0
@@ -13,7 +14,7 @@ else
 fi
 
 
-if [ SWAP -eq 0 ];
+if [ $SWAP -eq 0 ];
 then
     sudo dphys-swapfile swapoff && \
     printf "# /etc/dphys-swapfile - user settings for dphys-swapfile package\n
