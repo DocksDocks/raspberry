@@ -1,7 +1,8 @@
 # Raspberry Pi - Utilities
-Trying to make a few utilities for raspberry pi
 
-## Useful information 
+Trying to make a few utilities for Raspberry Pi system.
+
+### Useful information 
 
 I limited in the scripts 'swap_change.sh' and 'limit_swap_change.sh' a maximum amount of 8GB for safety reasons.
 
