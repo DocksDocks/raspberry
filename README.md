@@ -5,7 +5,9 @@ Trying to make a few utilities for raspberry pi
 
 I limited in the scripts 'swap_change.sh' and 'limit_swap_change.sh' a maximum amount of 8GB for safety reasons.
 
-## Using swap_change.sh - Change your swap size
+## Swap
+
+### Using swap_change.sh - Change your swap size
 
 Usage:
 ```
@@ -16,7 +18,8 @@ And '2' being your swap size in GB
 The default swap limit of raspberry is 2GB if you want to use more than that you can do it by using 'limit_swap_change.sh'
 
 Reminder - Using this script will back your limit to 2GB
-## Using limit_swap_change.sh - Increase your swap limit
+
+### Using limit_swap_change.sh - Increase your swap limit
 
 
 
