@@ -1,5 +1,9 @@
-if [ $1 -gt 4 ]; then
+if [ $1 -gt 4 ]; 
+then
   SWAP=$((1024*4)) 
+elif [ $1 -lt 0 ]; 
+then
+  SWAP=100
 else
   SWAP=$(( 1024 * $1))
 fi
