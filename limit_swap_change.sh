@@ -1,4 +1,4 @@
-if [ "$1" == "default" ]; 
+if [ $1 -eq 0 ]; 
 then
   SWAP = 0
 elif [ $1 -lt 0 ]; 
