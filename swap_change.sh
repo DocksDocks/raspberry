@@ -37,4 +37,4 @@ CONF_SWAPSIZE=$SWAP\n
 #CONF_MAXSWAP=$SWAP" >> /etc/dphys-swapfile && \
 sudo dphys-swapfile setup && \
 sudo dphys-swapfile swapon && \
-echo "swap to $1GB was successful"
+echo "swap to ${SWAP}MB was successful"
