@@ -1,7 +1,9 @@
 # Raspberry Pi - Utilities
 Trying to make a few utilities for raspberry pi
 
+## Useful information 
 
+I limited in the scripts 'swap_change.sh' and 'limit_swap_change.sh' an maximum of 8GB for safety reasons.
 
 ## Using swap_change.sh - Change your swap size
 
@@ -19,6 +21,6 @@ Reminder - If you use this command it will go back to the default size of your s
 
 Usage:
 ```
-sudo sh limit_Swap_change.sh 4
+sudo sh limit_swap_change.sh 4
 ```
 And '4' being your swap limit size in GB
