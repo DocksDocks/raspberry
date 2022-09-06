@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $1 -gt 8 ]; 
 then
   SWAP=$((1024*8)) 
