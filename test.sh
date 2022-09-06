@@ -1,4 +1,4 @@
-if [ $1 > 4]; then
+if [[ $1 -gt 4]]; then
   SWAP=$((1024*4))
 else
   SWAP=$(( 1024 * $1))
