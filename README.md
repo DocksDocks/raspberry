@@ -8,7 +8,7 @@ I limited in the scripts 'swap_change.sh' and 'limit_swap_change.sh' a maximum a
 
 ## Swap
 
-### Using swap_change.sh - Change your swap size
+### Using swap_change.sh - Change your swap size (DEFAULT LIMIT 2GB)
 
 Usage:
 ```
@@ -20,7 +20,7 @@ The default swap limit of raspberry is 2GB if you want to use more than that you
 
 Reminder - Using this script will back your limit to 2GB
 
-### Using limit_swap_change.sh - Increase your swap limit
+### Using limit_swap_change.sh - Increase your swap limit (UPTO 8GB)
 
 
 
