@@ -4,7 +4,7 @@ then
 elif [ $1 -lt 0 ]; 
 then
   SWAP=100
-elif [[ "$1" == "default" ]];
+elif [ "$1" == "default" ];
 then
     $SWAP = 0 
 else
