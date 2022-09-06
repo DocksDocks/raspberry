@@ -1,11 +1,11 @@
 #!/bin/bash
-SWAP = 0
+SWAP=0
 if [ $1 -eq 0 ]; 
 then
-  SWAP = 0
+  SWAP=0
 elif [ $1 -lt 0 ]; 
 then
-  SWAP = 100
+  SWAP=100
 elif [ $1 -gt 8 ];
 then
   SWAP=$((1024*8)) 
