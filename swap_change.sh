@@ -35,7 +35,7 @@ CONF_SWAPSIZE=$SWAP\n
 #   can be set to empty for no limit, but beware of filled partitions!\n
 #   this is/was a (outdated?) 32bit kernel limit (in MBytes), do not overrun it\n
 #   but is also sensible on 64bit to prevent filling /var or even / partition\n
-#CONF_MAXSWAP=$SWAP" >> /etc/dphys-swapfile && \
+#CONF_MAXSWAP=$SWAP" > /etc/dphys-swapfile && \
 sudo dphys-swapfile setup && \
 sudo dphys-swapfile swapon && \
 echo "swap to ${SWAP}MB was successful"
