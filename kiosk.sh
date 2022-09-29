@@ -1,12 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
-
-if [[ ! -e /home/pi/kiosk.sh  ]]; then
-    touch /home/pi/kiosk.sh
+filename=$/home/pi/kiosk.sh
+if [ ! -f $filename ]
+then
+    touch $filename
 fi
 
-if [[ ! -e /lib/systemd/system/kiosk.service  ]]; then
-    touch /lib/systemd/system/kiosk.service
+filenameS=$/lib/systemd/system/kiosk.service
+if [ ! -f $filenameS ]
+then
+    touch $filenameS
 fi
 printf "
 #!/bin/bash
