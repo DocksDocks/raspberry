@@ -26,8 +26,6 @@ sed -i 's/\"exit_type\":\"Crashed\"/\"exit_type\":\"Normal\"/' /home/$USER/.conf
 
 /usr/bin/chromium --noerrdialogs --disable-infobars --kiosk https://youtube.com &" > /home/pi/kiosk.sh
 
-chmod u+x /home/pi/kiosk.sh
-
 printf "[Unit]
 Description=Chromium Kiosk
 Wants=graphical.target
@@ -44,6 +42,8 @@ Group=pi
 
 [Install]
 WantedBy=graphical.target" > /lib/systemd/system/kiosk.service
+
+chmod u+x /home/pi/kiosk.sh
 
 sudo systemctl enable kiosk.service
 
