@@ -49,4 +49,7 @@ Group=pi
 
 [Install]
 WantedBy=graphical.target" > /lib/systemd/system/kiosk.service && \
-sudo systemctl enable kiosk.service
+sudo systemctl enable kiosk.service && \
+echo "Starting..." && \
+sudo systemctl start kiosk.service
+
