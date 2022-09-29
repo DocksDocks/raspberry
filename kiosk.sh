@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt install xdotool unclutter sed
+sudo apt install -y xdotool unclutter sed
 
 filename=/home/pi/kiosk.sh
 if [ ! -f $filename ]
