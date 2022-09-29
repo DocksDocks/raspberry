@@ -43,7 +43,7 @@ Group=pi
 [Install]
 WantedBy=graphical.target" > /lib/systemd/system/kiosk.service
 
-chmod u+x /home/pi/kiosk.sh
+sudo chmod 750 /home/pi/kiosk.sh
 
 sudo systemctl enable kiosk.service
 
