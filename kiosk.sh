@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+if [[ ! -e /home/pi/kiosk.sh  ]]; then
+    touch /home/pi/kiosk.sh
+fi
+
+if [[ ! -e /lib/systemd/system/kiosk.service  ]]; then
+    touch /lib/systemd/system/kiosk.service
+fi
+
+
 printf 
 "
 #!/bin/bash
