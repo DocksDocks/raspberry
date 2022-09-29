@@ -13,6 +13,7 @@ if [ ! -f $filenameS ]
 then
     touch $filenameS
 fi
+
 printf "#!/bin/bash
 xset s noblank
 xset s off
@@ -23,8 +24,10 @@ unclutter -root &
 sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/' /home/$USER/.config/chromium/Default/Preferences
 sed -i 's/\"exit_type\":\"Crashed\"/\"exit_type\":\"Normal\"/' /home/$USER/.config/chromium/Default/Preferences
 
-/usr/bin/chromium --noerrdialogs --disable-infobars --kiosk https://youtube.com &" > /home/pi/kiosk.sh && \
-chmod u+x /home/pi/kiosk.sh && \
+/usr/bin/chromium --noerrdialogs --disable-infobars --kiosk https://youtube.com &" > /home/pi/kiosk.sh
+
+chmod u+x /home/pi/kiosk.sh
+
 printf "[Unit]
 Description=Chromium Kiosk
 Wants=graphical.target
@@ -40,8 +43,11 @@ User=pi
 Group=pi
 
 [Install]
-WantedBy=graphical.target" > /lib/systemd/system/kiosk.service && \
-sudo systemctl enable kiosk.service && \
-echo "Starting..." && \
+WantedBy=graphical.target" > /lib/systemd/system/kiosk.service
+
+sudo systemctl enable kiosk.service
+
+echo "Starting..."
+
 sudo systemctl start kiosk.service
 
