@@ -1,12 +1,12 @@
 #!/bin/sh
 
-filename=$/home/pi/kiosk.sh
+filename=/home/pi/kiosk.sh
 if [ ! -f $filename ]
 then
     touch $filename
 fi
 
-filenameS=$/lib/systemd/system/kiosk.service
+filenameS=/lib/systemd/system/kiosk.service
 if [ ! -f $filenameS ]
 then
     touch $filenameS
