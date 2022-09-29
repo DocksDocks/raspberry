@@ -19,8 +19,7 @@ if [ ! -f $filenameS ]
 then
     touch $filenameS
 fi
-printf "
-#!/bin/bash
+printf "#!/bin/bash
 xset s noblank
 xset s off
 xset -dpms
@@ -32,8 +31,7 @@ sed -i 's/\"exit_type\":\"Crashed\"/\"exit_type\":\"Normal\"/' /home/$USER/.conf
 
 /usr/bin/chromium --noerrdialogs --disable-infobars --kiosk https://youtube.com &" > /home/pi/kiosk.sh && \
 chmod u+x /home/pi/kiosk.sh && \
-printf "
-[Unit]
+printf "[Unit]
 Description=Chromium Kiosk
 Wants=graphical.target
 After=graphical.target
