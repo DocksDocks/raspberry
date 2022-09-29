@@ -14,6 +14,12 @@ then
     touch $filenameS
 fi
 
+filenameT=/etc/xdg/lxsession/LXDE-pi/autostart
+if [ ! -f $filenameT ]
+then
+    touch $filenameT
+fi
+
 printf "#!/bin/bash
 xset s noblank
 xset s off
@@ -42,6 +48,25 @@ Group=pi
 
 [Install]
 WantedBy=graphical.target" > /lib/systemd/system/kiosk.service
+
+printf "#################################################
+# LXDE-pi autostart script                      #
+#                                               #   
+# This file must be in the user's home e.g.     #
+# /home/pi/.config/lxsession/LXDE-pi/autostart. #
+#################################################
+
+## enable/disable screen saver
+#@xscreensaver -no-splash  # comment this line out to disable screensaver
+
+# Set the current xsession not to blank out the screensaver and then disables the screensaver altogether.
+@xset s noblank
+@xset s off
+# disables the display power management system
+@xset -dpms
+
+# Run the wanted app
+@bash /home/pi/kiosk.sh" > /etc/xdg/lxsession/LXDE-pi/autostart
 
 sudo chmod 750 /home/pi/kiosk.sh
 
