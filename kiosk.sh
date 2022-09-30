@@ -33,7 +33,7 @@ xset -dpms
 sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/' /home/pi/.config/chromium/Default/Preferences
 sed -i 's/\"exit_type\":\"Crashed\"/\"exit_type\":\"Normal\"/' /home/pi/.config/chromium/Default/Preferences" > /home/pi/kiosk.sh
 
-printf"#!/bin/bash
+printf "#!/bin/bash
 unclutter -idle 0.5 -root &" > /home/pi/hideMouse.sh
 
 printf "[Unit]
@@ -54,8 +54,7 @@ Group=pi
 [Install]
 WantedBy=graphical.target" > /lib/systemd/system/kiosk.service
 
-printf "
-# Run the wanted app
+printf "# Run the wanted app
 @bash /home/pi/hideMouse.sh" > /etc/xdg/lxsession/LXDE-pi/autostart
 
 sudo chmod 750 /home/pi/kiosk.sh
