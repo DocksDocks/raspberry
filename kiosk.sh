@@ -64,5 +64,3 @@ sudo systemctl enable kiosk.service
 
 echo "Starting..."
 
-sudo systemctl start kiosk.service
-
