@@ -34,7 +34,7 @@ sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/; s/\"exit_type\":\"[
 chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-interval=31536000 $KIOSK_URL
 " > $filenameA
 
-printf "
-[ -z "$DISPLAY" == '' && $XDG_VTNR -eq 1 ] && startx -- -nocursor" > $filenameB
+printf "#!bin/bash
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx -- -nocursor" > $filenameB
 
 echo "type:\n source ~/.bash_profile \nand then:\n sudo reboot"
