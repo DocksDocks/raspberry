@@ -35,6 +35,6 @@ chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-i
 " > $filenameA
 
 printf "#!bin/sh
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx -- -nocursor" >> $filenameB
+[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && startx -- -nocursor" >> $filenameB
 
 echo "type:\n source ~/.bash_profile \nand then:\n sudo reboot"
