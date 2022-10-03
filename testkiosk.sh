@@ -13,7 +13,7 @@ then
     touch $filenameE
 fi
 
-filenameB=home/pi/.bash_profile
+filenameB=/home/pi/.bash_profile
 if [ ! -f $filenameB ]
 then
     touch $filenameB
