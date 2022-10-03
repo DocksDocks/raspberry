@@ -46,7 +46,7 @@ Environment=DISPLAY=:0.0
 Environment=XAUTHORITY=/home/pi/.Xauthority
 Type=simple
 ExecStartPre=/home/pi/kiosk.sh
-ExecStart=/usr/bin/chromium --noerrdialogs --disable-infobars --kiosk http://youtube.com
+ExecStart=/usr/bin/chromium --noerrdialogs --disable-infobars --kiosk http://youtube.com https://google.com
 Restart=on-abort
 User=pi
 Group=pi
