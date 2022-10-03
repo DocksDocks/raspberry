@@ -38,7 +38,7 @@ sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/; s/\"exit_type\":\"[
 # Run Chromium in kiosk mode
 chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-interval=31536000 \$KIOSK_URL" > $filenameA
 
-printf profile.txt > $filenameB
+cat profile.txt > $filenameB
 
 printf "export KIOSK_URL=https://youtube.com" > $filenameE
 
