@@ -40,6 +40,6 @@ chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-i
 
 printf profile.txt > $filenameB
 
-printf "export KIOSK_URL=https://youtube.com" >> $filenameE
+printf "export KIOSK_URL=https://youtube.com" > $filenameE
 
 echo "type:\n \"source ~/.profile\" \nthen:\n \"sudo reboot\""
