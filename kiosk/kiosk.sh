@@ -19,7 +19,7 @@ then
     touch $filenameB
 fi
 
-filenameB=/etc/xdg/openbox/environment
+filenameE=/etc/xdg/openbox/environment
 if [ ! -f $filenameE ]
 then
     mkdir -p /etc/xdg/openbox
