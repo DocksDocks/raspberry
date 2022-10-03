@@ -19,7 +19,12 @@ then
     touch $filenameB
 fi
 
-KIOSK_URL=https://desertbot.io
+filenameB=/etc/xdg/openbox/environment
+if [ ! -f $filenameE ]
+then
+    mkdir -p /etc/xdg/openbox
+    touch $filenameE
+fi
 
 printf "xset -dpms            # turn off display power management system
 xset s noblank        # turn off screen blanking
@@ -31,10 +36,11 @@ sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/' ~/.config/chromium/
 sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/; s/\"exit_type\":\"[^\"]\+\"/\"exit_type\":\"Normal\"/' ~/.config/chromium/Default/Preferences
 
 # Run Chromium in kiosk mode
-chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-interval=31536000 $KIOSK_URL
+chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-interval=31536000 \$KIOSK_URL
 " > $filenameA
 
-printf "#!bin/sh
-[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && startx -- -nocursor" >> $filenameB
+printf "[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && startx -- -nocursor" >> $filenameB
 
-echo "type:\n source ~/.bash_profile \nand then:\n sudo reboot"
+printf "export KIOSK_URL=https://youtube.com" >> $filenameE
+
+echo "type:\n \"source ~/.profile\" \nthen:\n \"sudo reboot\""
