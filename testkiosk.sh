@@ -13,7 +13,7 @@ then
     touch $filenameE
 fi
 
-filenameB=/.bash_profile
+filenameB=home/pi/.bash_profile
 if [ ! -f $filenameB ]
 then
     touch $filenameB
@@ -35,3 +35,5 @@ chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-i
 " > $filenameA
 
 printf "[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx -- -nocursor" > $filenameB
+
+echo "type:\n source ~/.bash_profile \nand then:\n sudo reboot"
