@@ -36,10 +36,9 @@ sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/' ~/.config/chromium/
 sed -i 's/\"exited_cleanly\":false/\"exited_cleanly\":true/; s/\"exit_type\":\"[^\"]\+\"/\"exit_type\":\"Normal\"/' ~/.config/chromium/Default/Preferences
 
 # Run Chromium in kiosk mode
-chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-interval=31536000 \$KIOSK_URL
-" > $filenameA
+chromium-browser  --noerrdialogs --disable-infobars --kiosk --check-for-update-interval=31536000 \$KIOSK_URL" > $filenameA
 
-printf "[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && startx -- -nocursor" >> $filenameB
+printf profile.txt > $filenameB
 
 printf "export KIOSK_URL=https://youtube.com" >> $filenameE
 
